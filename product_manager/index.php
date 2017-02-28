@@ -54,6 +54,13 @@ if ($action == 'list_products') {
 
 }  else if($action =='list_categories'){
     $categories = get_categories();
+    $category_name = get_category_name($category_id);
     include('category_list.php');
+    if ($name == null) {
+        $error = "Invalid category data. Check field and try again.";
+        include('error.php');
+    } else {
+        add_category($category_name);
+    }
 }  
 ?>
