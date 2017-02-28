@@ -61,6 +61,7 @@ if ($action == 'list_products') {
         include('error.php');
     } else {
         add_category($category_name);
+        header('Location: .?action=list_categories');
     }
 }  
 ?>
