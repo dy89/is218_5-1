@@ -53,6 +53,7 @@ if ($action == 'list_products') {
     }
 
 }  else if($action =='list_categories'){
+    $categories = get_categories();
     include('category_list.php');
 }  
 ?>
