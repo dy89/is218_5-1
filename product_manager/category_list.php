@@ -8,7 +8,7 @@
             <th>&nbsp;</th>
         </tr>        
         <!-- add category rows here -->
-	<?php foreach ($categories as $categories) : ?>
+	<?php foreach ($categories as $category) : ?>
 	<tr>
 		<td><?php echo $category['categoryName']; ?></td>
 		<td class="right"><?php echo $category['category_id']; ?></td>
