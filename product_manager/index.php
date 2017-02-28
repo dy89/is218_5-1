@@ -52,7 +52,7 @@ if ($action == 'list_products') {
         header("Location: .?category_id=$category_id");
     }
 
-}  else if($action =='list_categories'){
+}  /*else if($action =='list_categories'){
     $categories = get_categories();
     $category_name = get_category_name($category_id);
     include('category_list.php');
@@ -63,5 +63,20 @@ if ($action == 'list_products') {
         add_category($category_name);
         header('Location: .?action=list_categories');
     }
-}  
+}*/
+
+if($action =='list_categories'){
+    $categories = get_categories();
+    $category_name = get_category_name($category_id);
+    include('category_list.php');
+} else if ($action == 'add_category'){
+    $name = filter_input(INPUT_POST, 'name');
+    if ($name == null) {
+        $error = "Invalid category data. Check field and try again.";
+        include('error.php');
+        header('Location: .?action=list_categories');
+    } else {
+        add_category($category_name);
+        header('Location: .?action=list_categories');
+    } 
 ?>

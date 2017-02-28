@@ -12,7 +12,8 @@
 	<tr>
 		<td><?php echo $category['categoryName']; ?></td>
 		<td class="right"><?php echo $category['category_id']; ?></td>
-		<td><form action="delete_category.php" method="post">
+		<td><form action="." method="post">
+            <input type ="hidden" name="action" value="delete_category">
 		    <input type="hidden" name="category_id"
 		           value="<?php echo $product['categoryID']; ?>">
 		    <input type="submit" value="Delete">
@@ -23,8 +24,9 @@
 
     <h2>Add Category</h2>
     <!-- add code for form here -->
-    <form action="add_category.php" method="post">
+    <form action="." method="post">
         <label>Name:</label>
+        <input type ="hidden" name="action" value="add_category">
         <input type="text" name="name">
         <input type="submit" value="Add"><br>
     </form>
