@@ -23,7 +23,12 @@
 
     <h2>Add Category</h2>
     <!-- add code for form here -->
-
+    <form action="add_category.php" method="post">
+        <label>Name:</label>
+        <input type="text" name="name">
+        <input type="submit" value="Add"><br>
+    </form>
+    <br>
     <p><a href="index.php?action=list_products">List Products</a></p>
 
 </main>
