@@ -8,6 +8,17 @@
             <th>&nbsp;</th>
         </tr>        
         <!-- add category rows here -->
+	<?php foreach ($categories as $categories) : ?>
+	<tr>
+		<td><?php echo $category['categoryName']; ?></td>
+		<td class="right"><?php echo $category['category_id']; ?></td>
+		<td><form action="delete_category.php" method="post">
+		    <input type="hidden" name="category_id"
+		           value="<?php echo $product['categoryID']; ?>">
+		    <input type="submit" value="Delete">
+		</form></td>
+	</tr>
+	<?php endforeach; ?>
     </table>
 
     <h2>Add Category</h2>
