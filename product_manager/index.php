@@ -76,7 +76,7 @@ if($action =='list_categories'){
         include('error.php');
         header('Location: .?action=list_categories');
     } else {
-        add_category($category_name);
+        add_category($name);
         header('Location: .?action=list_categories');
     }
 }
