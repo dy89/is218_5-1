@@ -13,10 +13,10 @@
 		<td><?php echo $category['categoryName']; ?></td>
 		<td class="right"><?php echo $category['category_id']; ?></td>
 		<td><form action="." method="post">
-		    <input type="hidden" name="category_id"
-		           value="<?php echo $product['categoryID']; ?>">
+		   <input type="hidden" name="category_id"
+		           value="<?php echo $category['categoryID']; ?>">
+	            <input type="hidden" name="action" value="delete_category">
 		    <input type="submit" value="Delete">
-		    <input type="hidden" name="action" value="delete_category">
 		</form></td>
 	</tr>
 	<?php endforeach; ?>
