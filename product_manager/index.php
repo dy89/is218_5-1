@@ -79,5 +79,16 @@ if($action =='list_categories'){
         add_category($name);
         header('Location: .?action=list_categories');
     }
+} else if ($action == 'delete_category'){
+    $name = filter_input(INPUT_POST, 'name');
+    $category_id= filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
+    if ($category_id == false) {
+    	$error = "Invalid category";
+	include('error.php');
+    } else {
+	delete_category($category_id);
+	header('Location: .?action=list_categories');
+    }
 }
+
 ?>
