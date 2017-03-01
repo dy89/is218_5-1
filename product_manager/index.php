@@ -78,5 +78,6 @@ if($action =='list_categories'){
     } else {
         add_category($category_name);
         header('Location: .?action=list_categories');
-    } 
+    }
+}
 ?>
